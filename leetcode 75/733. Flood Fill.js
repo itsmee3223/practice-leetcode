@@ -38,6 +38,8 @@ const floodFill = (image, sr, sc, newColor, firstColor = image[sr][sc]) => {
   // handle if the coordinate is out of bounds
   // or if it is already the new color
   // or if it's not from the original color we're trying to change
+  console.log(image);
+  console.log("\n");
   if (
     sr < 0 ||
     sc < 0 ||
@@ -59,3 +61,11 @@ const floodFill = (image, sr, sc, newColor, firstColor = image[sr][sc]) => {
   // return modified image
   return image;
 };
+
+const image = [
+  [1, 1, 1],
+  [1, 1, 0],
+  [1, 0, 1],
+];
+
+floodFill(image, 1, 1, 2);

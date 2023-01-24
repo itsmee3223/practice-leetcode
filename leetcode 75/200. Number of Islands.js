@@ -46,6 +46,8 @@ var numIslands = function (grid) {
 };
 // DFS
 function markIslands(row, col, grid) {
+  console.log(grid);
+  console.log("\n");
   if (
     row < 0 ||
     col < 0 ||
@@ -62,3 +64,11 @@ function markIslands(row, col, grid) {
   markIslands(row, col - 1, grid); // left
   markIslands(row, col + 1, grid); // right
 }
+
+const grid = [
+  ["1", "1", "1", "1", "0"],
+  ["1", "1", "0", "1", "0"],
+  ["1", "1", "0", "0", "0"],
+  ["0", "0", "0", "0", "0"],
+];
+numIslands(grid);
