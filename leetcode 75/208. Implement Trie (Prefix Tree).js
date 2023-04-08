@@ -33,6 +33,7 @@
 class Trie {
   constructor() {
     this.root = {};
+    this.isWord = false;
   }
 
   insert(word) {
